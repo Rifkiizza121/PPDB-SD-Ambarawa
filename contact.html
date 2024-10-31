@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  
+    <title>KEMAH KERJA TEKNIK GEODESI</title>
+  
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
+  
+  <body class="sub_page">
+    <div class="hero_area">
+      <!-- header section strats -->
+      <div class="hero_bg_box">
+        <div class="img-box">
+          <img src="images/bg.png" alt="">
+        </div>
+      </div>
+  
+      <header class="header_section">
+        <div class="header_top">
+          <div class="container-fluid">
+            <div class="contact_link-container">
+              <a href="" class="contact_link1">
+                <img src="images/logo.png" alt="Logo" style="width: 150px; height: auto;">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header_bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+              <a class="navbar-brand" href="index.html">
+                <span>
+                  KEMAH KERJA TEKNIK GEODESI
+                </span>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""></span>
+              </button>
+  
+              <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="about.html"> Informasi Sekolah</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="service.html"> Analisis Sekolah </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="guard.html"> Tentang Kami </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- contact section -->
+ 
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with GeoJSON Points and Polygons</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+      #map {
+        height: 500px;
+      }
+      .legend {
+        background: white;
+        padding: 10px;
+        line-height: 1.5;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <div id="map"></div>
+  
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+      // Data GeoJSON untuk titik sekolah
+      var geoDataSD = {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.396835, -7.244828]
+            },
+            "properties": {
+              "name": "SDN 1 Baran "
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.395958, -7.244549]
+            },
+            "properties": {
+              "name": "SDN 2 Baran"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.412794, -7.274111]
+            },
+            "properties": {
+              "name": "SDN Bejalen "
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.402351, -7.253188]
+            },
+            "properties": {
+              "name": "SDN 1 Kranggan"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.411912, -7.254865]
+            },
+            "properties": {
+              "name": "SDN 1 Kupang "
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.408816, -7.251999]
+            },
+            "properties": {
+              "name": "SDN 2 Kupang"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.413232, -7.251683]
+            },
+            "properties": {
+              "name": "SDN 3 Kupang "
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.413526, -7.250837]
+            },
+            "properties": {
+              "name": "SDN 4 Kupang"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.406202, -7.260231]
+            },
+            "properties": {
+              "name": "SDN 2 Lodoyong"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.409181, -7.263652]
+            },
+            "properties": {
+              "name": "SDN 3 Lodoyong"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.390626, -7.262065]
+            },
+            "properties": {
+              "name": "SDN 1 Ngampin "
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.391091, -7.264518]
+            },
+            "properties": {
+              "name": "SDN 2 Ngampin"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.4033412, -7.2674186]
+            },
+            "properties": {
+              "name": "SDN 2 Panjang"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.4031871, -7.2678637]
+            },
+            "properties": {
+              "name": "SDN 3 Panjang"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.413232, -7.251683]
+            },
+            "properties": {
+              "name": "SDN 4 Panjang"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.381311, -7.246370]
+            },
+            "properties": {
+              "name": "SDN 1 Pasekan"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.36998, -7.24369]
+            },
+            "properties": {
+              "name": "SDN 2 Pasekan"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.37184, -7.25713]
+            },
+            "properties": {
+              "name": "SDN 3 Pasekan"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.39907, -7.27445]
+            },
+            "properties": {
+              "name": "SDN Pojoksari"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.407356, -7.267073]
+            },
+            "properties": {
+              "name": "SDN Sudirman"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.418945, -7.261014]
+            },
+            "properties": {
+              "name": "SDN 1 Tambakboyo "
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [110.418540, -7.257626]
+            },
+            "properties": {
+              "name": "SDN 2 Tambakboyo"
+            }
+          }
+          // Tambahkan lebih banyak fitur di sini jika diperlukan
+        ]
+      };
+  
+      // Inisialisasi peta
+      var map = L.map('map').setView([-7.251683, 110.413232], 10);
+  
+      // Tambahkan tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+  
+      // Tambahkan layer titik dari geoDataSD
+      L.geoJson(geoDataSD, {
+        pointToLayer: function(feature, latlng) {
+          return L.circleMarker(latlng, {
+            radius: 8,
+            fillColor: "#ff7800",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+          });
+        },
+        onEachFeature: function(feature, layer) {
+          if (feature.properties && feature.properties.name) {
+            layer.bindPopup(feature.properties.name);
+          }
+        }
+      }).addTo(map);
+  
+      // Memuat dan menambahkan layer poligon dari ambarawa.js
+      // Pastikan bahwa geoDataAmbarawa sudah didefinisikan di dalam ambarawa.js
+      var geoDataAmbarawa; // Definisikan variabel ini
+      fetch('js/ambarawa.js')
+        .then(response => response.json())
+        .then(data => {
+          geoDataAmbarawa = data; // Menyimpan data ke variabel
+          L.geoJson(geoDataAmbarawa, {
+            style: function(feature) {
+              return {
+                color: "#008000",
+                weight: 2,
+                opacity: 0.6,
+                fillOpacity: 0.3,
+                fillColor: "#008000"
+              };
+            },
+            onEachFeature: function(feature, layer) {
+              if (feature.properties && feature.properties.name) {
+                layer.bindPopup(feature.properties.name);
+              }
+            }
+          }).addTo(map);
+        });
+  
+      // Tambahkan legenda
+      var legend = L.control({ position: "bottomright" });
+      legend.onAdd = function(map) {
+        var div = L.DomUtil.create("div", "legend");
+        div.innerHTML += "<h4>Legenda</h4>";
+        div.innerHTML += '<i style="background: #ff7800; width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 5px;"></i><span>SD Kecamatan Ambarawa</span><br>';
+        return div;
+      };
+      legend.addTo(map);
+    </script>
+  
+  </body>
+  </html
+
+  end contact section -->
+
+  <!-- info section -->
+  <section class="info_section text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-3 d-flex flex-column align-items-center">
+          <div class="info_links">
+              <h5>
+                Kemah Kerja
+              </h5>
+            </a>
+            <p>
+              Kemah Kerja Teknik Geodesi dilakukan di Kelurahan Tambakboyo, Kecamatan Ambarawa 23-25 Oktober 2023.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex flex-column align-items-center">
+          <div class="info_links">
+            <h5>
+              Tema
+            </h5>
+            <p>
+              Tema yang diangkat adalah masalah SDGs Indonesia yang terdapat di Kelurahan Tambakboyo, Kecamatan Ambarawa.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex flex-column align-items-center">
+          <div class="info_links">
+            <h5>
+              Kelompok
+            </h5>
+            <p>
+              Kami, kelompok 4A, membuat WebGIS dengan tema pendidikan yang sesuai masalah SDGs nomor 4 yaitu "Quality Education".
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- end info_section -->
+  
+  
+    <!-- footer section -->
+    <footer class="container-fluid footer_section">
+      <p>
+        &copy; <span id="2023"></span> All Rights Reserved. Design by
+        <a href="https://html.design/">Kelompok 4 Kemker Teknik Geodesi</a>
+      </p>
+    </footer>
+    <!-- footer section -->
+  
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+  
+  </html>
